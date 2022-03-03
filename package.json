@@ -1,0 +1,37 @@
+{
+  "name": "next-airbnb-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kid4211-developer/react-next-airbnb.git",
+  "author": "kid4211 <kid4211@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "babel-plugin-styled-components": "^2.0.6",
+    "next": "10.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3",
+    "styled-reset": "^4.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.23",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "typescript": "^4.5.5"
+  }
+}
