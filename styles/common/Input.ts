@@ -1,8 +1,10 @@
 import palette from "@styles/palette";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 type InputContainerProps = {
   iconExist: boolean;
+  isValid: boolean;
+  useValidation: boolean;
 };
 
 export const Container = styled.div<InputContainerProps>`
@@ -22,12 +24,38 @@ export const Container = styled.div<InputContainerProps>`
       border-color: ${palette.dark_cyan};
     }
   }
-  .input-icon-wrapper {
+
+  svg {
     position: absolute;
-    top: 0;
     right: 11px;
     height: 46px;
-    display: flex;
-    align-items: center;
   }
+
+  .input-error-message {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: ${palette.tawny};
+  }
+
+  ${({ useValidation, isValid }) =>
+    useValidation &&
+    !isValid &&
+    css`
+      input {
+        background-color: ${palette.snow};
+        border-color: ${palette.orange};
+        & :focus {
+          border-color: ${palette.orange};
+        }
+      }
+    `}
+  ${({ useValidation, isValid }) =>
+    useValidation &&
+    isValid &&
+    css`
+      input {
+        border-color: ${palette.dark_cyan};
+      }
+    `}
 `;

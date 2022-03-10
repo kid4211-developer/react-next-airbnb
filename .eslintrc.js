@@ -62,6 +62,7 @@ module.exports = {
       },
     ],
     "import/no-unresolved": "off",
+    "no-alert": "off",
   },
   settings: {
     "import/resolver": {

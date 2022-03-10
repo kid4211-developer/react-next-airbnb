@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import palette from "@styles/palette";
+import styled from "styled-components";
 
 export const Container = styled.div`
   position: sticky;
@@ -48,6 +48,28 @@ export const Container = styled.div`
       &:hover {
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
       }
+    }
+  }
+
+  .header-user-profile {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    padding: 0 6px 0 16px;
+    border: 0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
+    border-radius: 21px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+    }
+    .header-user-profile-image {
+      margin-left: 8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
     }
   }
 `;

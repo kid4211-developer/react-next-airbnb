@@ -1,7 +1,10 @@
 import palette from "@styles/palette";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{
+  isValid: boolean;
+  validateMode: boolean;
+}>`
   width: 100%;
   height: 46px;
   select {
@@ -21,4 +24,12 @@ export const Container = styled.div`
       border-color: ${palette.dark_cyan};
     }
   }
+  ${({ isValid, validateMode }) =>
+    validateMode &&
+    css`
+      select {
+        border-color: ${isValid ? palette.dark_cyan : palette.tawny} !important;
+        background-color: ${isValid ? "white" : palette.snow};
+      }
+    `}
 `;
